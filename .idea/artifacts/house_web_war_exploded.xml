@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="house-web:war exploded">
+    <output-path>$PROJECT_DIR$/house-web/target/house-web</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="house-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="house-common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="hose-common" />
+          </element>
+          <element id="archive" name="house-service-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="house-service" />
+          </element>
+          <element id="archive" name="house-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="house-dao" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/house-web/target/house-web/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="house-web/web/Web" />
+    </root>
+  </artifact>
+</component>
