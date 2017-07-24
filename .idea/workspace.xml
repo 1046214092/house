@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="560bb941-9c83-4670-8136-8121670e5590" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hose-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-web/target/tomcat/conf/tomcat-users.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-web/target/tomcat/conf/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-web/target/tomcat/work/localEngine-8080/localhost/house/org/apache/jsp/index_jsp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/house-web/target/tomcat/work/localEngine-8080/localhost/house/org/apache/jsp/index_jsp.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -80,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -132,8 +125,8 @@
             <state relative-caret-position="-741">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1500888627165" expanded="true" signature="59:63602" ph="..." />
-                <marker date="1500888627165" expanded="true" signature="63576:63591" ph="..." />
+                <marker date="1500888664700" expanded="true" signature="59:65057" ph="..." />
+                <marker date="1500888664700" expanded="true" signature="65031:65046" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1006,7 +999,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500885678290</updated>
-      <workItem from="1500885679990" duration="2372000" />
+      <workItem from="1500885679990" duration="2397000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1500888399797</created>
@@ -1029,11 +1022,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500888563675</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create project">
+      <created>1500888658439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1500888658439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2372000" />
+    <option name="totallyTimeSpent" value="2397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="736" extended-state="0" />
@@ -1134,8 +1134,8 @@
         <state relative-caret-position="-741">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500888627165" expanded="true" signature="59:63602" ph="..." />
-            <marker date="1500888627165" expanded="true" signature="63576:63591" ph="..." />
+            <marker date="1500888664700" expanded="true" signature="59:65057" ph="..." />
+            <marker date="1500888664700" expanded="true" signature="65031:65046" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1223,7 +1223,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
       </provider>
