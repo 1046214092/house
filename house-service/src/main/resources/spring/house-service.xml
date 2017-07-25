@@ -17,11 +17,11 @@
       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd   ">
 
 	<import resource="classpath:spring/house-dao.xml"></import>
+    <context:component-scan base-package="com.zcq.house.service.*" />
 
 	<!-- 数据源 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 
-
-	<context:component-scan base-package="com.zcq.house.service.*" />
 
 	<aop:aspectj-autoproxy expose-proxy="true"/>
 

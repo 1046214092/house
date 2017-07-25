@@ -37,6 +37,14 @@
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.7.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.7.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.7.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="library" name="Maven: org.lazyluke:log4jdbc-remix:0.2.7" level="project" />
     <orderEntry type="module" module-name="house-service" />
     <orderEntry type="module" module-name="house-dao" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:4.2.4.RELEASE" level="project" />
@@ -50,6 +58,8 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.4" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:0.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.6.2" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" level="project" />

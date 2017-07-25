@@ -17,8 +17,8 @@
       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd   ">
 
 	<!--<context:component-scan base-package="com.creditease.dds.*" />-->
-	<context:component-scan base-package="com.zcq.house.*"/>
-	<context:property-placeholder location="classpath*:*.properties" />
+	<context:component-scan base-package="com.zcq.house.dao"/>
+	<context:property-placeholder location="classpath*:propterties/*.properties" />
 
 
 	<!-- 数据源 -->
@@ -61,7 +61,7 @@
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.creditease.dds.mapper" />
+		<property name="basePackage" value="com.zcq.house.dao.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 	<!-- 配置事务的传播特性 -->
