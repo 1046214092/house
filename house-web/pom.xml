@@ -10,6 +10,10 @@
     <packaging>war</packaging>
     <name>house-web Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <properties>
+    <spring.version>4.2.4.RELEASE</spring.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -29,7 +33,25 @@
             <version>${house.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.24-incubating</version>
+        </dependency>
+
     </dependencies>
+
     <build>
         <finalName>house-web</finalName>
     </build>

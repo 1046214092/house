@@ -10,12 +10,104 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>house-dao</artifactId>
+
+    <properties>
+        <spring.version>4.2.4.RELEASE</spring.version>
+        <log4j2.version>2.3</log4j2.version>
+        <junit.version>4.12</junit.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <mybatis.version>3.3.1</mybatis.version>
+        <mybatis2spring.version>1.2.4</mybatis2spring.version>
+        <druid.version>1.0.15</druid.version>
+        <ojdbc.version>11.2.0.1.0</ojdbc.version>
+        <sia.version>3.1.20</sia.version>
+        <smp-core.version>5.0.0</smp-core.version>
+        <jedis.version>2.8.1</jedis.version>
+        <disruptor.version>3.3.4</disruptor.version>
+        <ibatis.version>2.3.4.726</ibatis.version>
+        <cxf.version>2.7.3</cxf.version>
+        <jaxen.version>1.1.1</jaxen.version>
+        <org.hibernate-version>3.6.3.Final</org.hibernate-version>
+        <logback.spring.version>0.1.4</logback.spring.version>
+        <logback.version>1.1.3</logback.version>
+
+
+    </properties>
+
 <dependencies>
     <dependency>
         <groupId>com.zcq.house</groupId>
         <artifactId>house-common</artifactId>
         <version>${house.version}</version>
     </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+        <!-- <scope>runtime</scope> -->
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-oxm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- 添加mybatis的核心包 -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${mybatis.version}</version>
+    </dependency>
+    <!-- 添加mybatis与Spring整合的核心包 -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>${mybatis2spring.version}</version>
+    </dependency>
+
+    <!-- 添加分页插件 -->
+    <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>4.0.1</version>
+    </dependency>
+
 </dependencies>
 
 </project>
