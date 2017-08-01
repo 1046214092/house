@@ -1,12 +1,12 @@
-package com.zcq.house.dao.mapper;
+package com.zcq.house.mapper;
 
-import com.zcq.house.dao.entity.Test;
-import com.zcq.house.dao.entity.TestExample;
+import com.zcq.house.entity.Test;
+import com.zcq.house.entity.TestExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TestMapper {
-    int countByExample(TestExample example);
+    long countByExample(TestExample example);
 
     int deleteByExample(TestExample example);
 

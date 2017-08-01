@@ -1,28 +1,33 @@
-package com.zcq.house.service.base;
+package com.zcq.house.service.impl;
 
 import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
+import com.zcq.house.service.BaseService;
+import org.apache.commons.beanutils.MethodUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.beans.PropertyDescriptor;
-import java.lang.reflect.*;
-import java.util.List;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 
 /**
  * Created by Administrator on 2017/7/25.
  */
-public   class BaseService<T> {
-
+public class BaseServiceImpl <T> implements BaseService<T> {
+    public Logger logger = LoggerFactory.getLogger(this.getClass());
     public Page<T> findPage(T t)  {
         Object invoke= getMapper(t);
 
         Method selectByExample=null;
         try {
-            selectByExample = invoke.getClass().getMethod("selectByExample");
-            Object invoke1 = selectByExample.invoke(invoke, t);
+            Object selectByExample1 = MethodUtils.invokeExactMethod(invoke, "selectByExample", t);
 
-            System.out.println(invoke);
+
         }catch (Exception e){
-
+            e.printStackTrace();
         }
 
 
@@ -44,12 +49,11 @@ public   class BaseService<T> {
             name = name.substring(0, 1).toLowerCase() + name.substring(1);
             PropertyDescriptor propertyDescriptor=new PropertyDescriptor(name + "Mapper",this.getClass());
             Method readMethod = propertyDescriptor.getReadMethod();
-              invoke = readMethod.invoke(this);
+            invoke = readMethod.invoke(this);
         }catch (Exception e){
 
         }
 
         return invoke ;
     }
-
 }

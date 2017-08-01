@@ -1,17 +1,18 @@
 package com.zcq.house.web;
 
-import com.zcq.house.dao.entity.Test;
-import com.zcq.house.service.TestService;
-import org.slf4j.Logger;
+ import com.fasterxml.jackson.core.JsonProcessingException;
+ import com.fasterxml.jackson.databind.ObjectMapper;
+ import com.zcq.house.entity.Test;
+ import com.zcq.house.service.TestService;
+ import com.zcq.house.service.impl.TestServiceImpl;
+ import com.zcq.house.vo.TestVo1;
+ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
+ import org.springframework.web.bind.annotation.*;
+  import javax.servlet.http.HttpServletRequest;
+ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public class TestController {
     public Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private TestService testService;
+    private TestServiceImpl testService;
 
     @RequestMapping("a/{id}")
     @ResponseBody
@@ -36,13 +37,22 @@ public class TestController {
         return  list;
     }
 
+    @RequestMapping(value = "b",method = RequestMethod.POST)
+    @ResponseBody
+    public  TestVo1 a(@RequestBody TestVo1 testVo1,HttpServletRequest request){
+        try {
+            logger.debug(new ObjectMapper().writeValueAsString(testVo1));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return  testVo1;
+    }
 
-
-    public TestService getTestService() {
+    public TestServiceImpl getTestService() {
         return testService;
     }
 
-    public void setTestService(TestService testService) {
+    public void setTestService(TestServiceImpl testService) {
         this.testService = testService;
     }
 }

@@ -1,4 +1,4 @@
-package com.zcq.house.dao.entity;
+package com.zcq.house.entity;
 
 import java.util.ArrayList;
 import java.util.List;

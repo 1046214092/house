@@ -1,4 +1,4 @@
-package com.zcq.house.dao.entity;
+package com.zcq.house.entity;
 
 public class Test {
     private String id;
@@ -29,5 +29,4 @@ public class Test {
     public void setName(Integer name) {
         this.name = name;
     }
-
 }
