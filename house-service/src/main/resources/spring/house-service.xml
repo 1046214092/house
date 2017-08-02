@@ -18,6 +18,7 @@
 
 	<context:annotation-config/>
  	<import resource="classpath:spring/house-dao.xml"></import>
+	<context:component-scan base-package="com.zcq.house.service.impl" />
 
 
 	<!--
@@ -28,9 +29,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
-	<!--<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />-->
 
-	<context:component-scan base-package="com.zcq.house.service.impl" />
 
 	<aop:config proxy-target-class="true"></aop:config>
 
