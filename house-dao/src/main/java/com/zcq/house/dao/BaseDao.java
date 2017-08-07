@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/28.
+ * Created by changqingzhou on 2017/7/28.
  */
 public interface BaseDao<Example,Entity> {
     long countByExample(Example example);

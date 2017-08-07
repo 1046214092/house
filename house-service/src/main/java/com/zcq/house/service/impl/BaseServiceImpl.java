@@ -23,7 +23,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/25.
+ * Created by changqingzhou on 2017/7/25.
  */
 public class BaseServiceImpl <Entity,Example> implements BaseService<Entity,Example> {
 

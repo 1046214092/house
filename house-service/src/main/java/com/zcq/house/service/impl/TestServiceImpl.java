@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/25.
+ * Created by changqingzhou on 2017/7/25.
  */
 @Service
 public class TestServiceImpl  extends BaseServiceImpl  <Test,TestExample>  implements TestService {
