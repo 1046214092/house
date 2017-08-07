@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="560bb941-9c83-4670-8136-8121670e5590" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/house-dao/src/main/resources/mybatis/TestMapper.xml" afterPath="$PROJECT_DIR$/house-dao/src/main/resources/mybatis/TestMapper.xml" />
     </list>
     <list id="05ce74ad-0b21-4a86-a32f-c00a3196e8a3" name="Failed commit: Default" comment="create project" />
     <ignored path="house.iws" />
@@ -1019,7 +1017,7 @@
       <workItem from="1501639324322" duration="6587000" />
       <workItem from="1501650541565" duration="3536000" />
       <workItem from="1502073369443" duration="256000" />
-      <workItem from="1502086505401" duration="773000" />
+      <workItem from="1502086505401" duration="812000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1500888399797</created>
@@ -1126,11 +1124,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502073395859</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="create project">
+      <created>1502087287274</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1502087287274</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63863000" />
+    <option name="totallyTimeSpent" value="63902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
