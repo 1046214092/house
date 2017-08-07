@@ -13,7 +13,7 @@ import java.lang.reflect.*;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/25.
+ * Created by changqingzhou on 2017/7/25.
  */
 public   interface BaseService<Entity,Example> {
 

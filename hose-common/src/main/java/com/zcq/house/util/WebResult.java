@@ -1,7 +1,7 @@
 package com.zcq.house.util;
 
 /**
- * Created by Administrator on 2017/8/2.
+ * Created by changqingzhou on 2017/8/2.
  */
 public class WebResult {
 
