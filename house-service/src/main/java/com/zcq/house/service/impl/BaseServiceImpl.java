@@ -3,6 +3,7 @@ package com.zcq.house.service.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zcq.house.dao.BaseDao;
 import com.zcq.house.entity.Test;
 import com.zcq.house.entity.TestExample;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
@@ -26,21 +28,11 @@ import java.util.List;
 public class BaseServiceImpl <Entity,Example> implements BaseService<Entity,Example> {
 
     public Logger logger = LoggerFactory.getLogger(this.getClass());
-    public Page<Entity> findPage(Example t)  {
-
-
-        Method selectByExample=null;
-
-            PageHelper.startPage(1,10);
-            List list = getMapper().selectByExample(new TestExample());
+    public PageInfo<Entity> findPage(Example t,Integer start,Integer limit)  {
+            PageHelper.startPage(start,limit);
+            List list = getMapper().selectByExample(t);
+            PageInfo<Entity> p=new PageInfo<Entity>(list);
             logger.error("size{}",list.size());
-
-
-
-
-
-
-        Page p=new Page();
         return p;
     }
 
@@ -54,18 +46,19 @@ public class BaseServiceImpl <Entity,Example> implements BaseService<Entity,Exam
         return  getMapper().deleteByExample(example);
     }
 
+    @Transactional(readOnly = false)
   public   int insert(Entity record){
       return  getMapper().insert(record);
   }
-
+    @Transactional(readOnly = false)
     public  int insertSelective(Test record){
         return  getMapper().insert(record);
     }
-
+    @Transactional(readOnly = false)
    public List<Entity> selectByExample(Example example){
        return  getMapper().selectByExample(example);
    }
-
+    @Transactional(readOnly = false)
    public int updateByExampleSelective( Entity record, Example example){
        return  getMapper().updateByExampleSelective(record,example);
    }

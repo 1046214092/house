@@ -2,22 +2,20 @@ package com.zcq.house.web;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.pagehelper.PageInfo;
 import com.zcq.house.entity.Test;
+import com.zcq.house.entity.TestExample;
 import com.zcq.house.service.TestService;
-import com.zcq.house.service.impl.TestServiceImpl;
 import com.zcq.house.util.WebResult;
 import com.zcq.house.vo.TestVo1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by Administrator on 2017/7/24.
@@ -58,6 +56,17 @@ public class TestController {
         int insert = testService.insert(test);
         result.setResult(insert);
         return  result;
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = "page",method = RequestMethod.POST)
+    public PageInfo page(@RequestBody Test test) throws InvocationTargetException, IllegalAccessException {
+        WebResult result=new WebResult();
+        TestExample testExample = new TestExample();
+        testExample.createCriteria().andIdEqualTo(test.getId());
+        PageInfo<Test> page = testService.findPage(testExample, 1, 10);
+         return  page;
     }
 
     public TestService getTestService() {

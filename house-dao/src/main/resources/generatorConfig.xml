@@ -46,9 +46,8 @@
             <property name="trimStrings" value="true"/>
             <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
             <property name="immutable" value="false"/>
-            <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
-            <property name="javaExampleTargetPackage" value="entity"/>
+            <property name="javaModelTargetPackage" value="entity"/>
             <property name="javaExampleTargetProject" value="example"/>
         </javaModelGenerator>
 
@@ -66,6 +65,7 @@
         <javaClientGenerator targetPackage="com.zcq.house.mapper"
                              targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
+            <property name="rootInterface" value="com.zcq.house.dao.BaseDao"></property>
         </javaClientGenerator>
 
 

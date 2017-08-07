@@ -2,6 +2,7 @@ package com.zcq.house.service;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zcq.house.dao.BaseDao;
 import com.zcq.house.entity.Test;
 import org.apache.commons.beanutils.MethodUtils;
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public   interface BaseService<Entity,Example> {
 
-    public Page<Entity> findPage(Example t);
+    public PageInfo<Entity> findPage(Example t, Integer start, Integer limit);
 
     long countByExample(Example example);
 
