@@ -33,4 +33,41 @@ public class TestVo1 {
     public void setTestVo3(TestVo3 testVo3) {
         this.testVo3 = testVo3;
     }
+
+
+    public static final class TestVo1Builder {
+        private String id;
+        private TestVo2 testVo2;
+        private TestVo3 testVo3;
+
+        private TestVo1Builder() {
+        }
+
+        public static TestVo1Builder aTestVo1() {
+            return new TestVo1Builder();
+        }
+
+        public TestVo1Builder withId(String id) {
+            this.id = id;
+            return this;
+        }
+
+        public TestVo1Builder withTestVo2(TestVo2 testVo2) {
+            this.testVo2 = testVo2;
+            return this;
+        }
+
+        public TestVo1Builder withTestVo3(TestVo3 testVo3) {
+            this.testVo3 = testVo3;
+            return this;
+        }
+
+        public TestVo1 build() {
+            TestVo1 testVo1 = new TestVo1();
+            testVo1.setId(id);
+            testVo1.setTestVo2(testVo2);
+            testVo1.setTestVo3(testVo3);
+            return testVo1;
+        }
+    }
 }

@@ -8,6 +8,7 @@ import com.zcq.house.entity.TestExample;
 import com.zcq.house.service.TestService;
 import com.zcq.house.util.WebResult;
 import com.zcq.house.vo.TestVo1;
+import com.zcq.house.vo.TestVo2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by changqingzhou on 2017/7/24.
@@ -32,8 +34,18 @@ public class TestController {
     @ResponseBody
     public List<Test> a(@PathVariable String id) {
         logger.error(id);
+        TestVo2 v2=new TestVo2();
+        v2.setGender(12);
+        v2.setId(1231+"");
+        v2.setName(new Random().nextInt(10000)+"");
+        TestVo1 v1= TestVo1.TestVo1Builder.aTestVo1().withId("123").withTestVo2(v2).build();
         List<Test> list = testService.getList();
         logger.error("size:{},{}", list.size(), list);
+        try {
+            logger.warn("size:{}", new ObjectMapper().writeValueAsString(v1));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return list;
     }
 
@@ -52,9 +64,13 @@ public class TestController {
     @ResponseBody
     @RequestMapping(value = "save",method = RequestMethod.POST)
     public WebResult save(@RequestBody Test test){
-        WebResult result=new WebResult();
-        int insert = testService.insert(test);
-        result.setResult(insert);
+        WebResult result = new WebResult();
+        try {
+            int insert = testService.insert(test);
+            result.setResult(insert);
+        }catch (Exception e){
+          result.setMsg(e.getMessage());
+        }
         return  result;
     }
 

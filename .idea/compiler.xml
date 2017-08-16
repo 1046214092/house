@@ -29,7 +29,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hose-common" target="1.7" />
+      <module name="hose-common" target="1.8" />
       <module name="house" target="1.7" />
       <module name="house-dao" target="1.7" />
       <module name="house-service" target="1.7" />
